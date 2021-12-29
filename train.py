@@ -20,35 +20,47 @@
 # batch_size = 32  # size of batch taken from replay buffer
 # max_steps_per_episode = 10000
 
-import argparse
-import os
-import shutil
-from random import random, randint, sample
+# import os
+# import shutil
+# from random import random, randint, sample
 
-import numpy as np
-import torch
-import torch.nn as nn
-from tensorboardX import SummaryWriter
+# import numpy as np
+# import torch
+# import torch.nn as nn
+# from tensorboardX import SummaryWriter
 
-from deep_q import DeepQNetwork
-from Tetris import Tetris
-from collections import deque
+# from deep_q import DeepQNetwork
+# from Tetris import Tetris
+# from collections import deque
 
-width = 10  # The common width for all images
-height = 20  # The common height for all images
-block_size = 30  # Size of a block
-batch_size = 512  # The number of images per batch
-lr = 1e-3
-gamma = 0.99
-initial_epsilon = 1.0
-final_epsilon = 1e-3
-num_decay_epochs = 2000
-num_epochs = 3000
-save_interval = 1000
-replay_memory_size = 30000  # Number of epoches between testing phases
-log_path = "tensorboard"
-saved_path = "trained_models"
+# width = 10  # The common width for all images
+# height = 20  # The common height for all images
+# block_size = 30  # Size of a block
+# batch_size = 512  # The number of images per batch
+# lr = 1e-3
+# gamma = 0.99
+# initial_epsilon = 1.0
+# final_epsilon = 1e-3
+# num_decay_epochs = 2000
+# num_epochs = 3000
+# save_interval = 1000
+# replay_memory_size = 30000  # Number of epoches between testing phases
+# log_path = "tensorboard"
+# saved_path = "trained_models"
 
 
-def train(opt):
-    torch.manual_seed(42)
+# def train(opt):
+#     torch.manual_seed(42)
+
+#     if os.path.isdir(log_path):
+#         shutil.rmtree(log_path)
+
+#     os.makedirs(log_path)
+
+#     writer = SummaryWriter(log_path)
+#     env = Tetris(width=width, height=height)
+#     model = DeepQNetwork()
+#     optimizer = torch.optim.Adam(model.parameters, lr=lr)
+#     criterion = nn.MSELoss()
+
+#     state =
